@@ -16,6 +16,7 @@ RUN set -ex; \
              tzdata \
              xdg-utils \
              unzip \
+             rsync \
              bash; \
     rm -rf /var/lib/apt/lists/*
 
@@ -63,14 +64,6 @@ ENV NVM_DIR=/home/$USERNAME/.nvm \
     PATH=$NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH \
     NODE_DIR="${NVM_DIR}/versions/node/v${NODE_VERSION}/bin/" \
     URSIM_PATH=/ursim-polyscopex-${URSIM_VERSION}
-
-# Install nvm version, omit node install 
-
-RUN set -ex; \
-    mkdir -p $NVM_DIR; \
-    curl https://raw.githubusercontent.com/creationix/nvm/v$NVM_VERSION/install.sh | bash; \
-    . $NVM_DIR/nvm.sh; \
-    nvm use default
 
 # unzip the simulator and sdk zip files
 # change the user and group to psxdev
