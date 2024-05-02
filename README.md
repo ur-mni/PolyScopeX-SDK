@@ -4,10 +4,9 @@ This respository contains the PolyScope X SDK and URSim artifacts and is accessi
 
 ## Start Codespace from Repo
 
-1. Open the code drop down, and select the Codespaces tab. You can then choose to create a codespace on master (or any other repository). ![New Codespace](images/newCodespace.png)
+1. Open the code drop down, and select the Codespaces tab. You can then create a codespace on any branch by clicking on the `+` symbol. ![New Codespace](images/newCodespace.png)
 
-
-2. A new tab will open, and the codespace will start loading up. You will see a web version of VSCode. It can take a couple minutes to set up a remote connection, and build the codespace. You will know that the workspace has been built successfully when you see the postRunCommands being executed, as shown below. ![Container Start](images/containerStart.png)
+2. A new browser tab will open, and the codespace will start loading up. You will see a web version of VSCode. It can take a couple minutes to set up a remote connection, and build the codespace. You will know that the workspace has been built successfully when you see the postRunCommands being executed, as shown below. ![Container Start](images/containerStart.png)
 
 After you do this, you can access this cloud workspace [here](https://github.com/codespaces). Any changes to your space become a fork from this repository. 
 
@@ -18,11 +17,13 @@ To run the simulator, open a new terminal.  ![New Terminal](images/newTerminal.p
     
     `./run-simulator`
 
+    You should now see the output from the script, as URSim is booting up. 
+
 2. Open the PORTS tab next to your terminal. ![Forward Port Landing](images/portForward.png)
 
 3. You will have the option to forward a port here. By default, the simulator is launched on port 80. Enter "80" into the port number field and press enter. ![Forward Port Landing](images/portForward2.png)
 
-4. You can now open the dynamically generated link to view and use URSim. 
+4. You can now open the dynamically generated link to view and use URSim. This can take a couple minutes, and you may need to reload your simulator tab after the system is up and running. 
 
 5. If you want to close the simulator, enter `ctrl + c` into the terminal in which you ran the run-simulator script.
 
@@ -40,7 +41,7 @@ The contents of the SDK are:
 - urcap-generator/  - contains the URCap generator for creating URCap contributions.
 - samples/          - contains URCap samples. Build using: npm install && npm run build
 - newurcap.sh       - The script for creating a URCap contribution in your current working directory using the generator
-- run-simulator      - The script for running URSim. This is a linked file. The full URSim directory can be found at the `/` level.
+- run-simulator     - The script for running URSim. This is a linked file. The full URSim directory can be found at the `/` level.
 
 ### New URCap
 You can now create a new URCap by running the newURCap.sh shell script. 
