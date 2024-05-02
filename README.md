@@ -12,13 +12,19 @@ This respository contains the PolyScope X SDK and URSim artifacts and is accessi
 After you do this, you can access this cloud workspace [here](https://github.com/codespaces). Any changes to your space become a fork from this repository. 
 
 ## URSim & Port Forwarding 
-By default, URSim starts automatically once the codespace is built. However, you must manually forward the port being used in order to successfully run the application. This is also how you will access the URSim GUI. 
+To run the simulator, open a new terminal.  ![New Terminal](images/newTerminal.png)
 
-1. Open the PORTS tab next to your terminal. ![Forward Port Landing](images/portForward.png)
+1. Run the simulator script by using the following command: 
+    
+    `./run-simulator`
 
-2. You will have the option to forward a port here. By default, the simulator is launched on port 80. Enter "80" into the port number field and press enter. ![Forward Port Landing](images/portForward2.png)
+2. Open the PORTS tab next to your terminal. ![Forward Port Landing](images/portForward.png)
 
-3. You can now open the dynamically generated link to view and use URSim. 
+3. You will have the option to forward a port here. By default, the simulator is launched on port 80. Enter "80" into the port number field and press enter. ![Forward Port Landing](images/portForward2.png)
+
+4. You can now open the dynamically generated link to view and use URSim. 
+
+5. If you want to close the simulator, enter `ctrl + c` into the terminal in which you ran the run-simulator script.
 
 **Note: you can run URSim on a different port by using the port flag with the run-simulator script:**
 `./run-simulator --port <PORT_NUMBER>`
