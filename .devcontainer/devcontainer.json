@@ -14,7 +14,7 @@
   ],
   "onCreateCommand": "sudo chmod 666 /var/run/docker.sock",
   "updateContentCommand": "docker pull universalrobots/ursim_polyscopex:${URSIM_VERSION}",
-  "postCreateCommand": "sudo chmod 666 /var/run/docker.sock &(sudo rsync -ac --info=progress2 --exclude 'readme.txt' --exclude 'install.sh' /sdk-polyscopex-${SDK_VERSION}/ ${containerWorkspaceFolder} ) && (rm -f run-simulator && ln -s /${URSIM_PATH}/run-simulator .)",
+  "postCreateCommand": "sudo chmod 666 /var/run/docker.sock &(sudo rsync -ac --info=progress2 --exclude 'readme.txt' --exclude 'install.sh' /sdk-polyscopex-${SDK_VERSION}/ ${containerWorkspaceFolder} ) && (rm -f run-simulator && ln -s ${URSIM_PATH}/run-simulator .)",
   "containerEnv": {
     "SHELL": "/bin/bash",
     "DEV_CONTAINER": "true",
