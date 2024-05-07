@@ -49,7 +49,7 @@ RUN set -ex; \
 USER $USERNAME
 
 #   unzip files, chown to psxdev, and changed line in run-simulator.js to remove absolute path
-ENV URSIM_PATH=ursim-polyscopex-${URSIM_VERSION}
+ENV URSIM_PATH=/ursim-polyscopex-${URSIM_VERSION}
 RUN set -ex; \
     sudo unzip '*.zip'; \
     sudo rm web-sdk-external-${SDK_VERSION}.zip web-simulator-external-${URSIM_VERSION}.zip; \
