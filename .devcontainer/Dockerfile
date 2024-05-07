@@ -2,8 +2,7 @@ FROM node:18.17.1-bookworm
 ENV PS_VERSION=0.11.95-SNAPSHOT \
     URSIM_VERSION=0.9.68 \
     SDK_VERSION=5.0.36 \
-    NVM_VERSION=0.39.0 \
-    NODE_VERSION=18.17.1
+    NVM_VERSION=0.39.0 
 SHELL ["/bin/bash", "-c"]
 RUN set -ex; \
     apt-get update && apt-get install -y \
@@ -50,7 +49,7 @@ RUN set -ex; \
 USER $USERNAME
 
 #   unzip files, chown to psxdev, and changed line in run-simulator.js to remove absolute path
-ENV URSIM_PATH=/ursim-polyscopex-${URSIM_VERSION}
+ENV URSIM_PATH=ursim-polyscopex-${URSIM_VERSION}
 RUN set -ex; \
     sudo unzip '*.zip'; \
     sudo rm web-sdk-external-${SDK_VERSION}.zip web-simulator-external-${URSIM_VERSION}.zip; \
