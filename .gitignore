@@ -1,0 +1,7 @@
+samples/
+.devcontainer/.DS_STORE
+run-simulator
+newurcap.sh
+urcap-generator/
+.env
+.idea/
