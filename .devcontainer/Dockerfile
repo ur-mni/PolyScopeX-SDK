@@ -1,8 +1,7 @@
 FROM node:18.17.1-bookworm
 ENV PS_VERSION=0.11.95-SNAPSHOT \
     URSIM_VERSION=0.9.68 \
-    SDK_VERSION=5.0.36 \
-    NVM_VERSION=0.39.0 
+    SDK_VERSION=5.0.36 
 SHELL ["/bin/bash", "-c"]
 RUN set -ex; \
     apt-get update && apt-get install -y \
@@ -13,6 +12,7 @@ RUN set -ex; \
              sudo \
              tzdata \
              unzip \
+             openssh-server \
              rsync; \
     rm -rf /var/lib/apt/lists/*
 
