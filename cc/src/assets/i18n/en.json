@@ -1,0 +1,17 @@
+{
+  "program": {
+    "tree": {
+      "nodes": {
+        "vv-cc-progge": "Progge"
+      }
+    }
+  },
+  "application": {
+  "nodes": {
+    "vv-cc-appe": {
+      "title": "Appe",
+      "supportiveText": "Appe - Supportive Text"
+    }
+  }
+  }
+}

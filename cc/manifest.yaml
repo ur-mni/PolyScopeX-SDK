@@ -1,0 +1,10 @@
+metadata:
+  vendorID: vv
+  urcapID: cc
+  vendorName: "vendo"
+  urcapName: "contri"
+  version: 1.0.0
+artifacts:
+  webArchives:
+  - id: cc
+    folder: cc

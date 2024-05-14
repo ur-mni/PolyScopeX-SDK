@@ -1,0 +1,20 @@
+{
+  "applicationNodes": [
+    {
+      "translationPath": "assets/i18n/",
+      "behaviorURI": "appe.worker.js",
+      "presenterURI": "main.js",
+      "componentTagName": "vv-cc-appe"
+    }
+  ],
+  "programNodes": [
+    {
+      "excludeFromToolbox": false,
+      "translationPath": "assets/i18n/",
+      "iconURI": "assets/icons/progge.svg",
+      "behaviorURI": "progge.worker.js",
+      "presenterURI": "main.js",
+      "componentTagName": "vv-cc-progge"
+    }
+  ]
+}
